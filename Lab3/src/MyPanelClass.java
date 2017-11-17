@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Insets;
 import java.awt.Polygon;
+import java.awt.Rectangle;
 
 import javax.swing.JPanel;
  
@@ -50,7 +51,7 @@ public class MyPanelClass extends JPanel {
                         g.setColor(Color.DARK_GRAY);
                         g.fillPolygon(p);*/
                         
-                        Polygon p2 = new Polygon();
+                     /*   Polygon p2 = new Polygon();//star
                         p2.addPoint(x1 + 25, y1 + 73);
                         p2.addPoint(x1 + 41, y1 + 73);
                         p2.addPoint(x1 + 47, y1 + 58);
@@ -62,7 +63,62 @@ public class MyPanelClass extends JPanel {
                         p2.addPoint(x1 + 34, y1 + 98);
                         p2.addPoint(x1 + 38, y1 + 83);
                         g.setColor(Color.RED);
-                        g.drawPolygon(p2);
+                        g.drawPolygon(p2);*/
                         
+                    //Puerto Rico Flag
+                        g.setColor(Color.RED);
+                        g.fillRect(x1, y1, width + 1, height + 1);
+                      //stripes
+                        g.setColor(Color.WHITE);
+                        g.fillRect(0, height/5, width, height/5);
+                        g.fillRect(0, (3*height)/5, width, height/5);
+                       
+                       //triangle
+                        Polygon p3 = new Polygon();
+                        p3.addPoint(x1, y1);
+                        p3.addPoint(width/2, height/2);
+                        p3.addPoint(x1, height);
+                        g.setColor(Color.BLUE);
+                        g.fillPolygon(p3); 
+                        
+                        Polygon p2 = new Polygon();//star
+                        p2.addPoint(x1 + 25*3, y1 + 73*3);
+                        p2.addPoint(x1 + 41*3, y1 + 73*3);
+                        p2.addPoint(x1 + 47*3, y1 + 58*3);
+                        p2.addPoint(x1 + 53*3, y1 + 73*3);
+                        p2.addPoint(x1 + 69*3, y1 + 73*3);
+                        p2.addPoint(x1 + 56*3, y1 + 83*3);
+                        p2.addPoint(x1 + 61*3, y1 + 98*3);
+                        p2.addPoint(x1 + 47*3, y1 + 88*3);
+                        p2.addPoint(x1 + 34*3, y1 + 98*3);
+                        p2.addPoint(x1 + 38*3, y1 + 83*3);
+                        p2.translate(width/200 - 55, height/100 - 75);
+                        g.setColor(Color.WHITE);
+                        g.fillPolygon(p2);
+                        
+                                                
+                     
+                        /*Polygon p2 = new Polygon();//star
+                        int xBar = width / 10;
+                        int yBar = height / 2;
+                        int scalarFactorX = width/300;
+                        int scalarFactorY = height/300;
+                        p2.addPoint(((x1 + 25 - xBar)*scalarFactorX) + xBar , ((y1 + 73 - yBar)*scalarFactorY) + yBar);
+                        p2.addPoint(((x1 + 41 - xBar)*scalarFactorX) + xBar, ((y1 + 73 - yBar)*scalarFactorY) + yBar);
+                        p2.addPoint(((x1 + 47 - xBar)*scalarFactorX) + xBar, ((y1 + 58 - yBar)*scalarFactorY) + yBar);
+                        p2.addPoint(((x1 + 53 - xBar)*scalarFactorX) + xBar, ((y1 + 73 - yBar)*scalarFactorY) + yBar);
+                        p2.addPoint(((x1 + 69 - xBar)*scalarFactorX) + xBar, ((y1 + 73 - yBar)*scalarFactorY) + yBar);
+                        p2.addPoint(((x1 + 56 - xBar)*scalarFactorX) + xBar, ((y1 + 83 - yBar)*scalarFactorY) + yBar);
+                        p2.addPoint(((x1 + 61 - xBar)*scalarFactorX) + xBar, ((y1 + 98 - yBar)*scalarFactorY) + yBar);
+                        p2.addPoint(((x1 + 47 - xBar)*scalarFactorX) + xBar, ((y1 + 88 - yBar)*scalarFactorY) + yBar);
+                        p2.addPoint(((x1 + 34 - xBar)*scalarFactorX) + xBar, ((y1 + 98 - yBar)*scalarFactorY) + yBar);
+                        p2.addPoint(((x1 + 38 - xBar)*scalarFactorX) + xBar, ((y1 + 83 - yBar)*scalarFactorY) + yBar);
+                        g.setColor(Color.WHITE);
+                        g.fillPolygon(p2);*/
+
+                        
+                        
+                      
             }
+			
 }
